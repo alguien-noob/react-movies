@@ -7,7 +7,7 @@ export const get = async path => {
         'Content-Type' : TYPE
     }
     try {
-        await timelapse(1000)
+        // await timelapse(1000)
         return await fetch(`${API}${path}`,{headers})
         .then(res => res.ok ? res.json() : Promise.reject(new Error(res.status)));
 
@@ -17,4 +17,4 @@ export const get = async path => {
         ? error : new Error(error.message || 'desconocido')
     }
 }
-const timelapse = ms => new Promise(resolve => setTimeout(resolve, ms))
+// const timelapse = ms => new Promise(resolve => setTimeout(resolve, ms))
