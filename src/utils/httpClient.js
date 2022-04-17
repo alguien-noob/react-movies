@@ -2,7 +2,6 @@ const API = process.env.REACT_APP_API
 const AUTH = `Bearer ${process.env.REACT_APP_AUTH}`
 const TYPE = 'application/json;charset=utf-8'
 export const get = async path => {
-    console.log(API, AUTH, process.env)
     const headers = {
         Authorization: AUTH,
         'Content-Type' : TYPE
